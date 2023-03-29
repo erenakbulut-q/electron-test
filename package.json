@@ -8,7 +8,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
+    "publish": "GITHUB_TOKEN=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 electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
@@ -18,6 +18,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@electron-forge/publisher-github": "^6.1.0",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {

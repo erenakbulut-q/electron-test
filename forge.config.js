@@ -1,6 +1,18 @@
 module.exports = {
   packagerConfig: {},
   rebuildConfig: {},
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'erenakbulut-q',
+          name: 'electron-test',
+        },
+        // prerelease: true,
+      },
+    },
+  ],
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
