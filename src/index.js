@@ -1,5 +1,10 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, autoUpdater } = require('electron');
 const path = require('path');
+
+const server = 'https://hazel-test-alpha.vercel.app/'
+const url = `${server}/update/${process.platform}/${app.getVersion()}`
+
+autoUpdater.setFeedURL({ url })
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {

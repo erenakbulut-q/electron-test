@@ -4,6 +4,7 @@ module.exports = {
   publishers: [
     {
       name: '@electron-forge/publisher-github',
+      platforms: ['darwin', 'linux', 'win32'],
       config: {
         repository: {
           owner: 'erenakbulut-q',
